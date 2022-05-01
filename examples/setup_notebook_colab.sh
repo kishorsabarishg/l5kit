@@ -10,7 +10,7 @@ wget https://lyft-l5-datasets-public.s3-us-west-2.amazonaws.com/prediction/v1.1/
     -q --show-progress -P $TEMP_DOWNLOAD_DIR
 
 mkdir -p $TEMP_DATASET_DIR/scenes
-tar xf $TEMP_DOWNLOAD_DIR/sample.tar -C $TEMP_DATASET_DIR/scenes
+tar xf $TEMP_DOWNLOAD_DIR/sample.tar -C $TEMP_DATASET_DIR/train
 
 # Download semantic map
 echo "Downloading semantic map..."
