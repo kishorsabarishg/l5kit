@@ -6,7 +6,7 @@ TEMP_DATASET_DIR=$(mktemp -d)
 
 # Download sample zarr
 echo "Downloading sample zarr dataset..."
-wget https://lyft-l5-datasets-public.s3-us-west-2.amazonaws.com/prediction/v1.1/sample.tar \
+wget https://lyft-l5-datasets-public.s3-us-west-2.amazonaws.com/prediction/v1.1/train.tar \
     -q --show-progress -P $TEMP_DOWNLOAD_DIR
 
 mkdir -p $TEMP_DATASET_DIR/scenes
@@ -36,3 +36,4 @@ pip install --progress-bar off --quiet -U l5kit pyyaml
 
 echo "Dataset and L5kit are ready !"
 echo $TEMP_DATASET_DIR > "dataset_dir.txt"
+
